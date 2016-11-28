@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Jedi Academy Entry Form</title>
+<body style="background-color: black;color:#ff6;font-family: StarWars">
+<script>
+	function validateForm() {
+	var firstname = document.forms["form1"]["firstname"].value;
+    var lastname = document.forms["form1"]["lastname"].value;
+    var planet = document.forms["form1"]["planet"].value;
+    
+    if (firstname === "") {
+        message += "First Name is a required field. \n";
+        
+        //return false;
+        valid = false;
+    }      
+    if (lastname === "") {
+    	message += "Last Name is a required field. \n";
+        
+        //return false;
+        valid = false;
+    }       
+    if (planet === "") {
+    	message += "What Planet are you from? \n";
+        
+        //return false;
+        valid = false;
+    }       
+    
+    if (message !== "") {
+    	alert(message);
+    }
+    document.forms["form1"]["phone"].value = stripped;
+      return valid;
+}    
+</script>
+
+</head>
+<body>
+<h1><center>Enroll now for the Jedi Academy!</center></h1>
+
+<form name = "form1" action= "../enroll" onsubmit="return validateForm();" method="post">
+<p> First Name: <br><input type="text" name="firstname">
+<br>Last Name: <br><input type="text" name="lastname">
+<br>Planet: <br><input type="text" name="planet" required>
+</p>
+<p><input type="submit" value= "Click to Submit!" ></p>
+</form>
+</body>
+</html>

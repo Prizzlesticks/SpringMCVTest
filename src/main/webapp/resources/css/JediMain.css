@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+body{
+  background-color: black;
+  font-family: "StarWars";
+  color: #ff6;
+  text-align: center;
+}
+h1{
+	
+	font-family: "StarWars";
+	color: #ff6;
+}
+
+form1{
+	font-family: "StarWars";
+	color: rgb(75, 213, 238);
+}
